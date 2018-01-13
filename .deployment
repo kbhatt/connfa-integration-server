@@ -1,14 +1,15 @@
 [config]
-command = bash deploy.sh
+echo Downloading Composer
+curl -sS https://getcomposer.org/installer | php
+#command 
+#= bash deploy.sh
 ##################################################################################################################################
 
 # Download Composer
 
 # ----------
 
-echo Downloading Composer
 
-curl -sS https://getcomposer.org/installer | php
 
 ##################################################################################################################################
 
