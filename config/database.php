@@ -41,7 +41,7 @@ return [
     | All database work in Laravel is done through the PHP PDO facilities
     | so make sure you have the driver for your particular database of
     | choice installed on your machine before you begin development.
-    |
+    |mysql://b2324729743cbc:3e58cb78@us-cdbr-iron-east-05.cleardb.net/heroku_61619bcf59e258d?reconnect=true
     */
 
     'connections' => [
@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'heroku_61619bcf59e258d'),
+            'username' => env('DB_USERNAME', 'b2324729743cbc'),
+            'password' => env('DB_PASSWORD', '3e58cb78'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
