@@ -7,24 +7,10 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "dingo/api": "1.0.x@dev",
-        "bosnadev/repositories": " 0.*",
-        "vendocrat/laravel-settings": "dev-master",
-        "codeception/codeception": "^2.1",
-        "laravelcollective/html": "5.2.*",
-        "cerbero/command-validator": "^1.0",
-        "intervention/image": "dev-master",
-        "davejamesmiller/laravel-breadcrumbs": "^3.0",
-        "yajra/laravel-datatables-oracle": "~6.0",
-        "zizaco/entrust": "5.2.x-dev",
-        "fzaninotto/faker": "~1.4"
+        
     },
     "require-dev": {
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
-    },
+            },
     "autoload": {
         "classmap": [
             "database"
@@ -52,6 +38,14 @@
         ],
         "post-create-project-cmd": [
             "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
         ]
     },
     "config": {
